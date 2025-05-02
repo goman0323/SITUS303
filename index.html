@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Situs303 - Kalkulator Parlay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0e0e;
+      color: #f4c430;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #f4c430;
+      text-decoration: none;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #e0c97a;
+      max-width: 600px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttons button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      width: 200px;
+    }
+
+    .btn-gold {
+      background-color: #f4c430;
+      color: #000;
+    }
+
+    .btn-gold:hover {
+      background-color: #d4aa1f;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid #f4c430;
+      color: #f4c430;
+    }
+
+    .btn-outline:hover {
+      background-color: #f4c430;
+      color: #000;
+    }
+
+    .section, .parlay-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .parlay-section {
+      background-color: #111;
+    }
+
+    .section h2, .parlay-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .form-group, .leg-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #f4c430;
+      width: 200px;
+      color: #000;
+    }
+
+    button[type="submit"], .add-leg-btn {
+      padding: 12px 24px;
+      background-color: #f4c430;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .image-section {
+      padding: 60px 20px;
+      background-color: #0e0e0e;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .image-section .text {
+      flex: 1;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      background-color: #000;
+    }
+
+    .chat-button {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #f4c430;
+      color: #000;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1, .section h2 {
+        font-size: 1.5rem;
+      }
+      .image-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">
+      <img src="src="https://files.sitestatic.net/ImageFile/20250401212933000000906f2766a6__SITUS303__698x210.gif"" alt="Situs303 Logo">
+    </a>
+    <nav><a href="#">Kontak</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>Situs303</h1>
+    <p>Menyediakan permainan lengkap — situs terpercaya</p>
+    
+    <img 
+    src="https://i.imgur.com/PjGFpGb.gif" 
+    alt="Situs303 Promo" 
+    style="max-width: 90%; border-radius: 12px; margin: 25px 0;" />
+
+   
+    <div class="buttons">
+      <button class="btn-gold">Promo Terbaru</button>
+      <button class="btn-outline">Game Live</button>
+      <button class="btn-gold">Daftar Sekarang</button>
+      <button class="btn-outline">Login</button>
+    </div>
+  </section>
+
+  <section class="section">
+  <h2>Panduan Bermain</h2>
+  <div class="buttons">
+    <button class="btn-outline" onclick="alert('Isi konten panduan sportbook di sini')">Panduan Sportbook</button>
+    <button class="btn-outline" onclick="alert('Isi konten panduan togel di sini')">Panduan Togel</button>
+    <button class="btn-outline" onclick="alert('RTP gacor')">RTP Gacor</button>
+  </div>
+ </section>
+ 
+ 
+ <section class="parlay-section">
+    <h2>Kalkulator Parlay</h2>
+    <div class="form-group">
+      <label for="stake">Modal Taruhan:</label>
+      <input type="number" id="stake" placeholder="Masukkan jumlah taruhan" required />
+    </div>
+    <form id="parlayForm" onsubmit="event.preventDefault(); hitungParlay();">
+      <div id="legsContainer"></div>
+      <div class="form-group">
+        <button type="button" class="add-leg-btn" onclick="tambahLeg()">+ Tambah Leg</button>
+        <button type="submit">Hitung Parlay</button>
+      </div>
+    </form>
+    <div id="result"></div>
+  </section>
+
+  <section class="image-section">
+    <div class="text">
+      <h2>Layanan Kami</h2>
+      <p>Kami menyediakan berbagai permainan seperti slot, live casino, sportsbook, dan banyak lagi.</p>
+    </div>
+    <img src="https://via.placeholder.com/400x300.png?text=Situs303+Games" alt="Permainan Situs303">
+  </section>
+
+  <footer>
+    &copy; 2025 Situs303. Hak cipta dilindungi.
+  </footer>
+
+  <button class="chat-button" onclick="alert('Live chat akan segera tersedia')">💬 Live Chat</button>
+
+  <script>
+    let legCount = 0;
+    const maxLegs = 10;
+
+    function tambahLeg() {
+      if (legCount >= maxLegs) {
+        alert('Maksimal 10 leg yang dapat ditambahkan.');
+        return;
+      }
+      legCount++;
+      const container = document.getElementById('legsContainer');
+      const div = document.createElement('div');
+      div.className = 'leg-row';
+      div.innerHTML = `
+        <input type="text" name="club${legCount}" placeholder="Nama Club ${legCount}" required />
+        <input type="number" step="0.01" name="odds${legCount}" placeholder="Odds Club ${legCount}" required />
+        <select name="status${legCount}">
+          <option value="Menang">Menang</option>
+          <option value="Menang Setengah">Menang Setengah</option>
+          <option value="Kalah Setengah">Kalah Setengah</option>
+          <option value="Kalah">Kalah</option>
+          <option value="Void">Void</option>
+        </select>
+      `;
+      container.appendChild(div);
+    }
+
+    function hitungParlay() {
+      const stake = parseFloat(document.getElementById('stake').value);
+      if (isNaN(stake) || stake <= 0) {
+        alert('Masukkan modal taruhan yang valid.');
+        return;
+      }
+
+      let totalOdds = 1;
+      let valid = true;
+
+      for (let i = 1; i <= legCount; i++) {
+        const odds = parseFloat(document.querySelector(`[name=odds${i}]`).value);
+        const status = document.querySelector(`[name=status${i}]`).value;
+
+        if (isNaN(odds) || odds <= 1) {
+          alert(`Masukkan odds yang valid untuk Club ${i}.`);
+          return;
+        }
+
+        let adjustedOdds = 1;
+        switch (status) {
+          case 'Menang': adjustedOdds = odds; break;
+          case 'Menang Setengah': adjustedOdds = ((odds - 1) / 2) + 1; break;
+          case 'Kalah Setengah': adjustedOdds = 0.5; break;
+          case 'Kalah': valid = false; break;
+          case 'Void': adjustedOdds = 1; break;
+        }
+        if (!valid) break;
+        totalOdds *= adjustedOdds;
+      }
+
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = valid
+        ? `Potensi Kemenangan Parlay: <strong>Rp ${ (totalOdds * stake).toFixed(2) }</strong>`
+        : '<strong>Salah satu tim KALAH. Hasil parlay: 0 (Kalah Total)</strong>';
+    }
+
+    // Inisialisasi leg pertama
+    tambahLeg();
+  </script>
+</body>
+</html>

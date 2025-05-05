@@ -73,30 +73,31 @@
       align-items: center;
     }
 
+    .buttons a,
     .buttons button {
       padding: 12px 24px;
       font-size: 1rem;
-      border: none;
+      border: 2px solid transparent;
       border-radius: 6px;
       cursor: pointer;
       transition: all 0.3s ease;
       font-weight: 500;
       width: 200px;
+      background-color: transparent;
+      color: #f4c430;
     }
 
     .btn-gold {
+      border-color: #f4c430;
+    }
+
+    .btn-gold:hover {
       background-color: #f4c430;
       color: #000;
     }
 
-    .btn-gold:hover {
-      background-color: #d4aa1f;
-    }
-
     .btn-outline {
-      background-color: transparent;
       border: 2px solid #f4c430;
-      color: #f4c430;
     }
 
     .btn-outline:hover {
@@ -126,18 +127,19 @@
     }
 
     .parlay-link a {
-      background-color: #f4c430;
-      color: #000;
+      background-color: transparent;
+      color: #f4c430;
       padding: 12px 24px;
+      border: 2px solid #f4c430;
       border-radius: 8px;
       font-weight: 600;
       font-size: 1rem;
-      text-decoration: none;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     .parlay-link a:hover {
-      background-color: #d4aa1f;
+      background-color: #f4c430;
+      color: #000;
     }
 
     .image-section {
@@ -175,15 +177,21 @@
       position: fixed;
       bottom: 25px;
       right: 25px;
-      background-color: #f4c430;
-      color: #000;
+      background-color: transparent;
+      color: #f4c430;
       padding: 14px 20px;
-      border: none;
+      border: 2px solid #f4c430;
       border-radius: 50px;
       font-weight: 600;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       cursor: pointer;
       z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .chat-button:hover {
+      background-color: #f4c430;
+      color: #000;
     }
 
     @media (max-width: 768px) {
@@ -229,11 +237,11 @@
 
   <section class="section">
     <h2>Panduan Bermain</h2>
-<div class="buttons">
-  <a href="panduan-sportbook.html" class="btn-outline">Panduan Sportbook</a>
-  <a href="panduan-togel.html" class="btn-outline">Panduan Togel</a>
-  <a href="rtp-gacor.html" class="btn-outline">RTP Gacor</a>
-</div>
+    <div class="buttons">
+      <a href="panduan-sportbook.html" class="btn-outline">Panduan Sportbook</a>
+      <a href="panduan-togel.html" class="btn-outline">Panduan Togel</a>
+      <a href="rtp-gacor.html" class="btn-outline">RTP Gacor</a>
+    </div>
   </section>
 
   <section class="image-section">
